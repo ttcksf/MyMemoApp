@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BE6DCBD6E2F3807FCBF9B80 /* Pods_MyMemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C8B4E82AEEE50BE9CEC854 /* Pods_MyMemoAppTests.framework */; };
+		6BA71FBDABFF7293C7964DB1 /* Pods_MyMemoApp_MyMemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DAD9EF5207C34DD16054252 /* Pods_MyMemoApp_MyMemoAppUITests.framework */; };
+		7633C957D851B0805C5576C8 /* Pods_MyMemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2C7E1AD35787F4B87BB55F /* Pods_MyMemoApp.framework */; };
 		CE172E3427F8C4D400B836F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE172E3327F8C4D400B836F8 /* AppDelegate.swift */; };
 		CE172E3627F8C4D400B836F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE172E3527F8C4D400B836F8 /* SceneDelegate.swift */; };
-		CE172E3827F8C4D400B836F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE172E3727F8C4D400B836F8 /* ViewController.swift */; };
 		CE172E3B27F8C4D400B836F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE172E3927F8C4D400B836F8 /* Main.storyboard */; };
 		CE172E3D27F8C4D500B836F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE172E3C27F8C4D500B836F8 /* Assets.xcassets */; };
 		CE172E4027F8C4D500B836F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE172E3E27F8C4D500B836F8 /* LaunchScreen.storyboard */; };
 		CE172E4B27F8C4D500B836F8 /* MyMemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE172E4A27F8C4D500B836F8 /* MyMemoAppTests.swift */; };
 		CE172E5527F8C4D500B836F8 /* MyMemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE172E5427F8C4D500B836F8 /* MyMemoAppUITests.swift */; };
 		CE172E5727F8C4D500B836F8 /* MyMemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE172E5627F8C4D500B836F8 /* MyMemoAppUITestsLaunchTests.swift */; };
+		CE172E6627F8C8B100B836F8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE172E6527F8C8B100B836F8 /* HomeViewController.swift */; };
+		CECF981727F967C90078C366 /* MemoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF981627F967C90078C366 /* MemoDataModel.swift */; };
+		CECF981927F96B870078C366 /* MemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF981827F96B870078C366 /* MemoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +41,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00C8B4E82AEEE50BE9CEC854 /* Pods_MyMemoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMemoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A22F5EACC3275FF0EB5B96 /* Pods-MyMemoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMemoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyMemoAppTests/Pods-MyMemoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3B2C7E1AD35787F4B87BB55F /* Pods_MyMemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		503E060A67F5FC3E5D0DE9E5 /* Pods-MyMemoApp-MyMemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMemoApp-MyMemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MyMemoApp-MyMemoAppUITests/Pods-MyMemoApp-MyMemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5DAD9EF5207C34DD16054252 /* Pods_MyMemoApp_MyMemoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMemoApp_MyMemoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D69001E348D2AC35E23F91B /* Pods-MyMemoApp-MyMemoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMemoApp-MyMemoAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyMemoApp-MyMemoAppUITests/Pods-MyMemoApp-MyMemoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9F9E0E3393D0860267095D89 /* Pods-MyMemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMemoApp.release.xcconfig"; path = "Target Support Files/Pods-MyMemoApp/Pods-MyMemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		C545ED9A93754EB9F0AC80AE /* Pods-MyMemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-MyMemoAppTests/Pods-MyMemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE172E3027F8C4D400B836F8 /* MyMemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE172E3327F8C4D400B836F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE172E3527F8C4D400B836F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE172E3727F8C4D400B836F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE172E3A27F8C4D400B836F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE172E3C27F8C4D500B836F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE172E3F27F8C4D500B836F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +61,10 @@
 		CE172E5027F8C4D500B836F8 /* MyMemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE172E5427F8C4D500B836F8 /* MyMemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMemoAppUITests.swift; sourceTree = "<group>"; };
 		CE172E5627F8C4D500B836F8 /* MyMemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE172E6527F8C8B100B836F8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CECF981627F967C90078C366 /* MemoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDataModel.swift; sourceTree = "<group>"; };
+		CECF981827F96B870078C366 /* MemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewController.swift; sourceTree = "<group>"; };
+		F62145AC04F68C947A59AD35 /* Pods-MyMemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMemoApp.debug.xcconfig"; path = "Target Support Files/Pods-MyMemoApp/Pods-MyMemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7633C957D851B0805C5576C8 /* Pods_MyMemoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE6DCBD6E2F3807FCBF9B80 /* Pods_MyMemoAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +88,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA71FBDABFF7293C7964DB1 /* Pods_MyMemoApp_MyMemoAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E981DBE00EE4D788390CAD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F62145AC04F68C947A59AD35 /* Pods-MyMemoApp.debug.xcconfig */,
+				9F9E0E3393D0860267095D89 /* Pods-MyMemoApp.release.xcconfig */,
+				6D69001E348D2AC35E23F91B /* Pods-MyMemoApp-MyMemoAppUITests.debug.xcconfig */,
+				503E060A67F5FC3E5D0DE9E5 /* Pods-MyMemoApp-MyMemoAppUITests.release.xcconfig */,
+				36A22F5EACC3275FF0EB5B96 /* Pods-MyMemoAppTests.debug.xcconfig */,
+				C545ED9A93754EB9F0AC80AE /* Pods-MyMemoAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE172E2727F8C4D300B836F8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +116,8 @@
 				CE172E4927F8C4D500B836F8 /* MyMemoAppTests */,
 				CE172E5327F8C4D500B836F8 /* MyMemoAppUITests */,
 				CE172E3127F8C4D400B836F8 /* Products */,
+				2E981DBE00EE4D788390CAD7 /* Pods */,
+				EC2DFC937C2DDC8BC03C7BF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +136,13 @@
 			children = (
 				CE172E3327F8C4D400B836F8 /* AppDelegate.swift */,
 				CE172E3527F8C4D400B836F8 /* SceneDelegate.swift */,
-				CE172E3727F8C4D400B836F8 /* ViewController.swift */,
 				CE172E3927F8C4D400B836F8 /* Main.storyboard */,
 				CE172E3C27F8C4D500B836F8 /* Assets.xcassets */,
 				CE172E3E27F8C4D500B836F8 /* LaunchScreen.storyboard */,
 				CE172E4127F8C4D500B836F8 /* Info.plist */,
+				CE172E6527F8C8B100B836F8 /* HomeViewController.swift */,
+				CECF981627F967C90078C366 /* MemoDataModel.swift */,
+				CECF981827F96B870078C366 /* MemoDetailViewController.swift */,
 			);
 			path = MyMemoApp;
 			sourceTree = "<group>";
@@ -127,6 +164,16 @@
 			path = MyMemoAppUITests;
 			sourceTree = "<group>";
 		};
+		EC2DFC937C2DDC8BC03C7BF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B2C7E1AD35787F4B87BB55F /* Pods_MyMemoApp.framework */,
+				5DAD9EF5207C34DD16054252 /* Pods_MyMemoApp_MyMemoAppUITests.framework */,
+				00C8B4E82AEEE50BE9CEC854 /* Pods_MyMemoAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE172E5A27F8C4D500B836F8 /* Build configuration list for PBXNativeTarget "MyMemoApp" */;
 			buildPhases = (
+				A01F3A51A95172C15CA568FE /* [CP] Check Pods Manifest.lock */,
 				CE172E2C27F8C4D300B836F8 /* Sources */,
 				CE172E2D27F8C4D300B836F8 /* Frameworks */,
 				CE172E2E27F8C4D300B836F8 /* Resources */,
+				21D1B03258E6BB9A663D37BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE172E5D27F8C4D500B836F8 /* Build configuration list for PBXNativeTarget "MyMemoAppTests" */;
 			buildPhases = (
+				E39A3C299A31C1003CCA481A /* [CP] Check Pods Manifest.lock */,
 				CE172E4227F8C4D500B836F8 /* Sources */,
 				CE172E4327F8C4D500B836F8 /* Frameworks */,
 				CE172E4427F8C4D500B836F8 /* Resources */,
@@ -169,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE172E6027F8C4D500B836F8 /* Build configuration list for PBXNativeTarget "MyMemoAppUITests" */;
 			buildPhases = (
+				17ACA41D51346DEEC08E2887 /* [CP] Check Pods Manifest.lock */,
 				CE172E4C27F8C4D500B836F8 /* Sources */,
 				CE172E4D27F8C4D500B836F8 /* Frameworks */,
 				CE172E4E27F8C4D500B836F8 /* Resources */,
+				47AFB5AC15FF742633A28E2B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,14 +305,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17ACA41D51346DEEC08E2887 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyMemoApp-MyMemoAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21D1B03258E6BB9A663D37BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMemoApp/Pods-MyMemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMemoApp/Pods-MyMemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyMemoApp/Pods-MyMemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47AFB5AC15FF742633A28E2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMemoApp-MyMemoAppUITests/Pods-MyMemoApp-MyMemoAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMemoApp-MyMemoAppUITests/Pods-MyMemoApp-MyMemoAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyMemoApp-MyMemoAppUITests/Pods-MyMemoApp-MyMemoAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A01F3A51A95172C15CA568FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyMemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E39A3C299A31C1003CCA481A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyMemoAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE172E2C27F8C4D300B836F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE172E3827F8C4D400B836F8 /* ViewController.swift in Sources */,
+				CECF981927F96B870078C366 /* MemoDetailViewController.swift in Sources */,
 				CE172E3427F8C4D400B836F8 /* AppDelegate.swift in Sources */,
 				CE172E3627F8C4D400B836F8 /* SceneDelegate.swift in Sources */,
+				CE172E6627F8C8B100B836F8 /* HomeViewController.swift in Sources */,
+				CECF981727F967C90078C366 /* MemoDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +589,7 @@
 		};
 		CE172E5B27F8C4D500B836F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F62145AC04F68C947A59AD35 /* Pods-MyMemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +618,7 @@
 		};
 		CE172E5C27F8C4D500B836F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F9E0E3393D0860267095D89 /* Pods-MyMemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +647,7 @@
 		};
 		CE172E5E27F8C4D500B836F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A22F5EACC3275FF0EB5B96 /* Pods-MyMemoAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +668,7 @@
 		};
 		CE172E5F27F8C4D500B836F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C545ED9A93754EB9F0AC80AE /* Pods-MyMemoAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +689,7 @@
 		};
 		CE172E6127F8C4D500B836F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D69001E348D2AC35E23F91B /* Pods-MyMemoApp-MyMemoAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +708,7 @@
 		};
 		CE172E6227F8C4D500B836F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 503E060A67F5FC3E5D0DE9E5 /* Pods-MyMemoApp-MyMemoAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
