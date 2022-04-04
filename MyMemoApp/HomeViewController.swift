@@ -7,25 +7,34 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var memoDataList: [MemoDataModel] = []
+    let themeColorTypeKey = "themeColorTypeKey"
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
-        setMemoData()
         setNavigationBarButton()
+        setLeftNavigationBarButton()
+        let themeColorTypeInt = UserDefaults.standard.integer(forKey: themeColorTypeKey)
+        let themeColorType = MyColorType(rawValue: themeColorTypeInt) ?? .default
+        setThemeColor(type: themeColorType)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setMemoData()
+        tableView.reloadData()
+    }
+    
     func setMemoData(){
-        for i in 1...5{
-            let memoDataModel = MemoDataModel()
-            memoDataModel.text = "このメモは\(i)番目のメモです"
-            memoDataModel.recordDate = Date()
-            memoDataList.append(memoDataModel)
-        }
+        let realm = try! Realm()
+        let result = realm.objects(MemoDataModel.self)
+        memoDataList = Array(result)
     }
     
     @objc func tapAddButton(){
@@ -38,6 +47,65 @@ class HomeViewController: UIViewController {
         let buttonActionSelector: Selector = #selector(tapAddButton)
         let rightBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: buttonActionSelector)
         navigationItem.rightBarButtonItem = rightBarButton
+    }
+    
+    func setLeftNavigationBarButton(){
+        let buttonActionSelector: Selector = #selector(didTapColorSettingButton)
+        let leftButtonImage = UIImage(named: "colorSettingIcon")
+        let leftButton = UIBarButtonItem(image: leftButtonImage, style: .plain, target: self, action: buttonActionSelector)
+        navigationItem.leftBarButtonItem = leftButton
+    }
+    
+    @objc func didTapColorSettingButton(){
+        let defaultAction = UIAlertAction(title: "デフォルト", style: .default, handler: {_ -> Void in self.setThemeColor(type: .default)
+            
+        })
+        let orangeAction = UIAlertAction(title: "オレンジ", style: .default, handler: {_ -> Void in self.setThemeColor(type: .orange)
+            
+        })
+        let redAction = UIAlertAction(title: "レッド", style: .default, handler: {_ -> Void in self.setThemeColor(type: .red)
+    
+        })
+        let blueAction = UIAlertAction(title: "ブルー", style: .default, handler: {_ -> Void in self.setThemeColor(type: .blue)
+    
+        })
+        let pinkAction = UIAlertAction(title: "ピンク", style: .default, handler: {_ -> Void in self.setThemeColor(type: .pink)
+    
+        })
+        let greenAction = UIAlertAction(title: "グリーン", style: .default, handler: {_ -> Void in self.setThemeColor(type: .green)
+    
+        })
+        let purpleAction = UIAlertAction(title: "パープル", style: .default, handler: {_ -> Void in self.setThemeColor(type: .purple)
+    
+        })
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+        let alert = UIAlertController(title: "テーマカラーを選択してください", message: "", preferredStyle: .actionSheet)
+        alert.addAction(defaultAction)
+        alert.addAction(orangeAction)
+        alert.addAction(redAction)
+        alert.addAction(blueAction)
+        alert.addAction(pinkAction)
+        alert.addAction(greenAction)
+        alert.addAction(purpleAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true)
+    }
+    
+    func setThemeColor(type: MyColorType){
+        let isDefault = type == .default
+        let tintColor: UIColor = isDefault ? .black : .white
+        navigationController?.navigationBar.tintColor = tintColor
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = type.color
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        saveThemeColor(type: type)
+    }
+    
+    func saveThemeColor(type: MyColorType){
+        UserDefaults.standard.setValue(type.rawValue, forKey: themeColorTypeKey)
     }
 }
 
@@ -63,5 +131,15 @@ extension HomeViewController: UITableViewDelegate {
         memoDetailViewController.configure(memo: memoData)
         tableView.deselectRow(at: indexPath, animated: true)
         navigationController?.pushViewController(memoDetailViewController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let targetMemo = memoDataList[indexPath.row]
+        let realm = try! Realm()
+        try! realm.write{
+            realm.delete(targetMemo)
+        }
+        memoDataList.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }
